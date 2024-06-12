@@ -29,11 +29,11 @@ function displayChart(chartType) {
     document.querySelector(".charts").style.display = "block";
 
     switch (chartType) {
-        case "pie":
+        case "donut":
             document.getElementById("chart_div").style.display = "block";
             document.getElementById("barchart_div").style.display = "none";
             document.getElementById("areachart_div").style.display = "none";
-            drawChart("corechart", "pie");
+            drawChart("corechart", "donut");
             break;
         case "bar":
             document.getElementById("barchart_div").style.display = "block";
@@ -48,7 +48,7 @@ function displayChart(chartType) {
             drawChart("corechart", "area");
             break;
         default:
-            console.log("No radio button is checked");
+            console.log("Nenhum tipo de gráfico selecionado");
     }
 }
 
@@ -66,9 +66,10 @@ function drawChart(package, chartType) {
         let options;
         let chart;
 
-        if (chartType === "pie") {
+        if (chartType === "donut") {
             options = {
                 title: "Registros de Dispositivos",
+                pieHole: 0.4
             };
 
             chart = new google.visualization.PieChart(document.getElementById("chart_div"));
