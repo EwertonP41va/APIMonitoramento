@@ -2,7 +2,7 @@ let dispositivo = [];
 let totalRegistros = [];
 
 function getData() {
-  fetch("http://localhost:5000/monitoramento/grafico1")
+  fetch("http://192.168.13.219:5000/monitoramento")
     .then((response) => response.json())
     .then((data) => {
       console.log(data);

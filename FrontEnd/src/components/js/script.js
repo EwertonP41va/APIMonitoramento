@@ -1,6 +1,6 @@
 async function getData() {
     try {
-        const response = await fetch("http://192.168.13.130:5000/monitoramento");
+        const response = await fetch("http://192.168.13.219:5000/monitoramento");
         const data = await response.json();
         console.log(data);
         renderTable(data);
