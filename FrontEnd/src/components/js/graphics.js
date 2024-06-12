@@ -48,7 +48,7 @@ function displayChart(chartType) {
             drawChart("corechart", "area");
             break;
         default:
-            console.log("Nenhum tipo de gráfico selecionado");
+            console.log("No radio button is checked");
     }
 }
 
